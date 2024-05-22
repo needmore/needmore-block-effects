@@ -55,7 +55,7 @@ const withInspectorControls = createHigherOrderComponent((BlockEdit) => {
 addFilter('editor.BlockEdit', 'nmbe/withInspectorControls', withInspectorControls);
 
 // Save visual effect as a class
-const addSanmberops = (extraProps, blockType, attributes) => {
+const addSaveprops = (extraProps, blockType, attributes) => {
     let className = extraProps.className || '';
     if (attributes.visualEffect) {
         className += ` ${attributes.visualEffect}`;
@@ -68,4 +68,4 @@ const addSanmberops = (extraProps, blockType, attributes) => {
         className: className.trim(),
     };
 };
-addFilter('blocks.getSaveContent.extraProps', 'nmbe/addSanmberops', addSanmberops);
+addFilter('blocks.getSaveContent.extraProps', 'nmbe/addSaveprops', addSaveprops);
