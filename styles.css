@@ -1,0 +1,62 @@
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.in-view {
+    opacity: 1;
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+.slide-in.in-view {
+    transform: translateX(0);
+}
+
+.zoom-in {
+    transform: scale(0);
+    transition: transform 1s ease-in-out;
+}
+
+.zoom-in.in-view {
+    transform: scale(1);
+}
+
+.reveal-left-to-right {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.reveal-left-to-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+.reveal-left-to-right.in-view::before {
+    transform: translateX(0);
+}
+
+.fade-in-words p {
+    opacity: 1;
+}
+
+.fade-in-words p span {
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 0.25s ease-out;
+}
+
+.fade-in-words p.in-view span.fade-in-word {
+    opacity: 1;
+}
